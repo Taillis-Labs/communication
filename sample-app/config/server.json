@@ -1,0 +1,11 @@
+{
+  "env": "development",
+  "port": "3000",
+  "jwtSecret": "bA2xcjpf8y5aSUFsNB2qN5yymUBSs6es3qHoFpGkec75RCeBb8cpKauGefw5qy4",
+  "jwtExpirationInterval": "360",
+  "mongo": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "db": "evaluation"
+  }
+}

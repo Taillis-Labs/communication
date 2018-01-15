@@ -1,0 +1,43 @@
+$icon-font-path: "../fonts/bootstrap/";
+@import "bootstrap";
+@import "datetime";
+
+.bg-danger {
+  background-color: #f2dede!important;
+}
+
+.alert p {
+  margin: 0;
+}
+
+.header {
+  margin-bottom: 20px;
+
+  .navbar {
+    border-radius: 0;
+
+    &:active {
+      outline: none;
+    }
+  }
+
+  .navbar, .alert {
+    margin-bottom: 0px;
+  }
+}
+
+.form-group.required .control-label:after {
+  content: "*";
+  color: red;
+}
+
+.google_autocomplete_container{
+  position: absolute;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);  
+  z-index: 9999;
+  width: 100%;
+}
+
+.maps{
+  margin-bottom: 20px;
+}

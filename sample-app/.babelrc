@@ -1,0 +1,68 @@
+{
+  "env": {
+    "browser-dev": {
+      "presets": [
+        "react",
+        ["env", {
+          "targets": { "ie": 11 },
+          "modules": false
+        }],
+        "stage-0"
+      ],
+      "plugins": [
+        "react-hot-loader/babel",
+        ["transform-runtime", {
+          "polyfill": false,
+          "regenerator": true
+        }]
+      ]
+    },
+    "browser-prod": {
+      "presets": [
+        "react",
+        ["env", {
+          "targets": { "ie": 11 },
+          "modules": false
+        }],
+        "stage-0"
+      ],
+      "plugins": [
+        ["transform-runtime", {
+          "polyfill": false,
+          "regenerator": true
+        }]
+      ]
+    },
+    "server": {
+      "presets": [
+        "react",
+        ["env", {
+          "targets": { "node": 8 },
+          "modules": false
+        }],
+        "stage-0"
+      ]
+    }
+  },
+  "plugins": [
+    "transform-object-rest-spread",
+    ["transform-imports", {
+      "react-bootstrap": {
+        "transform": "react-bootstrap/lib/${member}",
+        "preventFullImport": true
+      },
+      "redux-form": {
+        "transform": "redux-form/lib/${member}",
+        "preventFullImport": true
+      },
+      "redux-form/immutable": {
+        "transform": "redux-form/lib/immutable/${member}",
+        "preventFullImport": true
+      },
+      "react-hot-loader": {
+        "transform": "react-hot-loader/lib/${member}",
+        "preventFullImport": true
+      }
+    }]
+  ]
+}
